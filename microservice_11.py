@@ -14,6 +14,7 @@ class DecimalEncoder(json.JSONEncoder):
             return str(o)
         return super(DecimalEncoder, self).default(o)
 
+
 app = Flask(__name__)
 @app.route('/microservicio/consultaproductoscatalogo/<catalogo>', methods=['GET'])
 def consulta_producto_catalogo(catalogo):
